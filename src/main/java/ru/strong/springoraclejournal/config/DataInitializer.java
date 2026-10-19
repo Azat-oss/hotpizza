@@ -49,8 +49,6 @@ public class DataInitializer  implements CommandLineRunner {
                 .phone("+7-999-000-00-00")
                 .address("Москва, ул. Админская, 1")
                 .role(Role.ADMIN)
-                .balance(BigDecimal.ZERO)
-                .receiveReceipts(false)
                 .build();
         userRepository.save(admin);
 
@@ -61,8 +59,6 @@ public class DataInitializer  implements CommandLineRunner {
                 .phone("+7-999-111-22-33")
                 .address("Москва, ул. Пушкина, д. 10, кв. 5")
                 .role(Role.USER)
-                .balance(BigDecimal.ZERO)
-                .receiveReceipts(false)
                 .build();
         userRepository.save(demo);
 
@@ -74,8 +70,6 @@ public class DataInitializer  implements CommandLineRunner {
                     .phone("+7-" + faker.numerify("###-###-##-##"))
                     .address(faker.address().streetAddress())
                     .role(Role.USER)
-                    .balance(BigDecimal.ZERO)
-                    .receiveReceipts(false)
                     .build();
             userRepository.save(u);
         }
